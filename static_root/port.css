@@ -1,0 +1,370 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Euclid Circular A", "Poppins";
+    background: #2a282d;
+    color: #222;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px;
+    width: 100%;
+    height: 72px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  }
+  
+  nav a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  nav span {
+    margin-right: 10px;
+  }
+  
+  nav a.active {
+    color: #19ec6a;
+  }
+  
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 15%;
+    text-align: center;
+  }
+  
+  section:nth-child(2) {
+    background: #ffffff;
+    
+  }
+  section:nth-child(2) img{
+    height: 300px;
+    width: 300px;
+    border-radius: 75%;
+    border: gold 5px double;
+    align-items: center;
+    
+  }
+  
+  section:nth-child(3) {
+    background: #fbf8ff;
+  }
+  
+  section:nth-child(4) {
+    background: #6940a7;
+  }
+
+  section:nth-child(5) {
+    background: #41394d;
+  }
+  section:nth-child(6) {
+    left: 0;
+    bottom: 12px;
+    width: 100%;
+    background: #172940;
+    padding-top: 60px;
+  }
+  footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 0 30px;
+  }
+  @media (width < 620px) {
+    footer {
+      flex-direction: column;
+    }
+  
+    footer.bottom {
+      gap: 16px;
+      flex-direction: column-reverse;
+    }
+  }
+  
+  footer > img {
+    margin-top: 10px;
+  }
+  
+  @media (width >= 620px) {
+    footer {
+      margin: 0 auto;
+      max-width: 600px;
+      padding: 0;
+    }
+  }
+  
+  footer {
+    color: #a2b5cd;
+  }
+  
+  footer.top {
+    border-bottom: 2px solid #3a4f6a;
+    
+    padding-bottom: 30px;
+  }
+  
+  footer.bottom {
+    padding: 20px 0;
+    justify-content: space-between;
+  }
+  
+  footer.top .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .links > div {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  footer h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #f7f7f7;
+  }
+  
+  .legal {
+    font-size: 12px;
+  }
+  
+  .legal > a {
+    margin: 0 4px;
+  }
+  
+  .legal > span {
+    margin-right: 10px;
+  }
+  
+  footer.bottom .links {
+    display: flex;
+    gap: 18px;
+  }
+  
+  footer.bottom .links > a {
+    font-size: 24px;
+  }
+  
+  @media (width < 420px) {
+    footer {
+      text-align: center;
+      align-items: center;
+    }
+  
+    footer.top .links {
+      grid-template-columns: 1fr;
+    }
+  
+    footer.bottom {
+      align-items: center;
+    }
+  
+    .legal > span {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 2px;
+    }
+}
+  
+  p {
+    color: #565656;
+    line-height: 1.8;
+  }
+  
+  section:nth-child(4) h2 {
+    color: rgb(255 255 255 / 96%);
+  }
+  
+  section:nth-child(4) p {
+    color: rgba(145, 130, 130, 0.7);
+  }
+.wrapper{
+  max-width: 500px;
+  width: 100%;
+  background: #585252;
+  margin: 20px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+
+.wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #052c1a;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #160113;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #380424;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #064150;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #07b4e9;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #07b4e9;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+
+
+}
